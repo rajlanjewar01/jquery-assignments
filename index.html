@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Jquery Assignment 1 - Accordion</title>
+</head>
+<body>
+    <!--Part  1-->
+    <div class="accordion-container">
+        <ul>
+            <li><a href="javascript:void(0)" id="tab-1">Home</a></li>
+            <li><a href="javascript:void(0)" id="tab-2">About us</a></li>
+            <li><a href="javascript:void(0)" id="tab-3">Contact us</a></li>
+        </ul>
+        <div class="tab-1">
+            <h2>Home</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quaerat.
+        </div>
+        <div class="tab-2" style="display: none;">
+            <h2>About us</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quaerat.
+        </div>
+        <div class="tab-3" style="display: none;">
+            <h2>Contact us</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quaerat.
+        </div>
+    </div>
+
+    <div class="accordion-container-2">
+        <a href="javascript:void(0)" id="home-link">Home</a>
+        <div class="tab2-1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, facilis molestiae! Unde debitis rem provident veniam suscipit ipsam excepturi fuga.
+        </div>
+        <a href="javascript:void(0)" id="about-link">About</a>
+        <div class="tab2-2" style="display:none">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, facilis molestiae! Unde debitis rem provident veniam suscipit ipsam excepturi fuga.
+        </div>
+        <a href="javascript:void(0)" id="contact-link">Contact</a>
+        <div class="tab2-3" style="display:none">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, facilis molestiae! Unde debitis rem provident veniam suscipit ipsam excepturi fuga.
+        </div>
+    </div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+        //part 1
+        $("#tab-1").click(function(){
+            $(".tab-1").show();
+            $(".tab-2").hide();
+            $(".tab-3").hide();
+        });
+        $("#tab-2").click(function(){
+            $(".tab-2").show();
+            $(".tab-1").hide();
+            $(".tab-3").hide();
+        });
+        $("#tab-3").click(function(){
+            $(".tab-3").show();
+            $(".tab-1").hide();
+            $(".tab-2").hide();
+        });
+
+        //part 2
+        $("#home-link").click(function(){
+            $(".tab2-1").slideToggle();
+        });
+        $("#about-link").click(function(){
+            $(".tab2-2").slideToggle();
+        });
+        $("#contact-link").click(function(){
+            $(".tab2-3").slideToggle();
+        });
+    });
+</script>
+</body>
+</html>
